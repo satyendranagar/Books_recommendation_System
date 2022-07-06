@@ -69,55 +69,82 @@ if st.button('Recommend'):
           st.image(url[3])
           st.text(name[3])
           st.text(author[3])
-          st.write(publisher[3])
+          st.text(publisher[3])
           st.text(year[3])
           st.text("")
      with col5:
           st.image(url[4])
           st.text(name[4])
           st.text(author[4])
-          st.write(publisher[4])
+          st.text(publisher[4])
           st.text(year[4])
           st.text("")
      with col6:
           st.image(url[5])
           st.text(name[5])
           st.text(author[5])
-          st.write(publisher[5])
+          st.text(publisher[5])
           st.text(year[5])
           st.text("")
 else:
-     pname = popular_books["Book-Title"].values
-     purl = popular_books["Image-URL-L"]
-     pauthor = popular_books["Book-Author"].values
-     pyear = popular_books["Year-Of-Publication"].values
-     ppublisher = popular_books["Publisher"].values
-     pnum_rating = popular_books["num_ratings"].values
-     pavg_rating = popular_books["avg_ratings"].values
+     name = popular_books["Book-Title"].values
+     url = popular_books["Image-URL-L"]
+     author = popular_books["Book-Author"].values
+     year = popular_books["Year-Of-Publication"].values
+     publisher = popular_books["Publisher"].values
+     num_rating = popular_books["num_ratings"].values
+     avg_rating = popular_books["avg_ratings"].values
+	col1, col2, col3, col4, col5 = st.columns(5)
+	
+	for i in range(10):
 
-     for i in purl:
-          st.image(i)
-
-     col1, col2, col3 = st.columns(3)
-
-     with col1:
-          st.image(purl[0])
-          st.text(pname[0])
-          st.text(pauthor[0])
-          st.write(ppublisher[0])
-          st.text(pyear[0])
-          st.text("")
-     with col2:
-          st.image(purl[1])
-          st.text(pname[1])
-          st.text(pauthor[1])
-          st.write(ppublisher[1])
-          st.text(pyear[1])
-          st.text("")
-     with col3:
-          st.image(purl[2])
-          st.text(pname[2])
-          st.text(pauthor[2])
-          st.write(ppublisher[2])
-          st.text(pyear[2])
-          st.text("")
+     	with col1:
+          	st.image(url[i*5 + 0])
+          	st.text("Name : " + name[i*5 + 0])
+          	st.text("Author : " + author[i*5 + 0])
+          	st.text("Publisher : " + publisher[i*5 + 0])
+          	st.text("Year : " + str(year[i*5 + 0]))
+			st.text("Num_rating : " + str(num_rating[i*5 + 0]))
+			st.text("Avg_rating : " + str(avg_rating[i*5 + 0]))
+          	st.text("")
+		
+		with col2:
+          	st.image(url[i*5 + 1])
+          	st.text("Name : " + name[i*5 + 1])
+          	st.text("Author : " + author[i*5 + 1])
+          	st.text("Publisher : " + publisher[i*5 + 1])
+          	st.text("Year : " + str(year[i*5 + 1]))
+			st.text("Num_rating : " + str(num_rating[i*5 + 1]))
+			st.text("Avg_rating : " + str(avg_rating[i*5 + 1]))
+          	st.text("")
+			
+		with col3:
+          	st.image(url[i*5 + 2])
+          	st.text("Name : " + name[i*5 + 2])
+          	st.text("Author : " + author[i*5 + 2])
+          	st.text("Publisher : " + publisher[i*5 + 2])
+          	st.text("Year : " + str(year[i*5 + 2]))
+			st.text("Num_rating : " + str(num_rating[i*5 + 2]))
+			st.text("Avg_rating : " + str(avg_rating[i*5 + 2]))
+          	st.text("")
+			
+		with col4:
+          	st.image(url[i*5 + 3])
+          	st.text("Name : " + name[i*5 + 3])
+          	st.text("Author : " + author[i*5 + 3])
+          	st.text("Publisher : " + publisher[i*5 + 3])
+          	st.text("Year : " + str(year[i*5 + 3]))
+			st.text("Num_rating : " + str(num_rating[i*5 + 3]))
+			st.text("Avg_rating : " + str(avg_rating[i*5 + 3]))
+          	st.text("")
+			
+		with col5:
+          	st.image(url[i*5 + 4])
+          	st.text("Name : " + name[i*5 + 4])
+          	st.text("Author : " + author[i*5 + 4])
+          	st.text("Publisher : " + publisher[i*5 + 4])
+          	st.text("Year : " + str(year[i*5 + 4]))
+			st.text("Num_rating : " + str(num_rating[i*5 + 4]))
+			st.text("Avg_rating : " + str(avg_rating[i*5 + 4]))
+          	st.text("")
+     
